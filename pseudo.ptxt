@@ -1,0 +1,32 @@
+Classe Filme:
+    Atributos:
+        - nome (Texto): Nome do filme.
+        - total_notas (Número): Somatório das notas dadas ao filme. Inicia com 0.
+        - total_avaliadores (Número): Quantidade de avaliações realizadas. Inicia com 0.
+
+    Métodos:
+        - avaliar_filme(nota: Número):
+            SE nota for menor que 0 OU maior que 10:
+                Exibir mensagem de erro: "Nota inválida. Insira um valor entre 0 e 10."
+            SENÃO:
+                Incrementar total_notas com o valor da nota.
+                Incrementar total_avaliadores em 1.
+                Exibir mensagem: "Avaliação registrada com sucesso."
+
+        - calcular_media():
+            SE total_avaliadores for igual a 0:
+                Retornar 0 (ou exibir mensagem: "Ainda não há avaliações.")
+            SENÃO:
+                Retornar total_notas dividido por total_avaliadores.
+
+Programa Principal:
+    - Criar uma instância da classe Filme, fornecendo o nome do filme.
+    - Exibir menu para o usuário com as opções:
+        1. Avaliar o filme
+            - Solicitar ao usuário a nota para o filme.
+            - Chamar o método avaliar_filme(nota).
+        2. Ver a média de avaliações
+            - Chamar o método calcular_media().
+            - Exibir a nota média do filme.
+        3. Sair do programa
+    - Repetir até que o usuário escolha sair.
